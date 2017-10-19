@@ -1,10 +1,9 @@
 cook_book = {}
-dishes = {}
-composition = []
 number = 0
 quantity_2 = []
+composition = []
 
-def dishes(number):
+def dishes(number): 
 	with open('recipes.txt', encoding='utf-8') as f:
 		for line in f:
 			dish = line.strip().lower()
@@ -29,9 +28,8 @@ def compositions():
 		return(composition)
 
 compositions()
-first = 0
-person = 3
 
+first = 1
 def chosen_compositions(name, first, person):
 	for dish in cook_book:
 		if dish == name:
@@ -48,36 +46,11 @@ def chosen_compositions(name, first, person):
 def program():
 	name = input('Введите блюда в расчете на одного человека (через запятую): ').lower().split(', ')
 	person = int(input('Введите количество человек: '))
+	first = 1
 	for i in range(len(name)):
 		chosen_compositions(name[i], first, person)
 	program()
 
 program()
-# def inputs_name():
-# 	if len(name)==1:
-# 		chosen_compositions(name[0], first)
-
-
-# def person():
-
-
-    	
-
-
-# inputs_name()
-# 		for i in range():
-# 			print (composition[i])
-					
-
-# int(cook_book.get(dish))
-
-
-
-# for dish in cook_book:
-# 	if dish = 
-# # with open('recipes.txt', encoding='utf-8') as f:
-#  	for line in f:
-#  		for dish in cook_book:
-#  			if dish == name:
 
 
